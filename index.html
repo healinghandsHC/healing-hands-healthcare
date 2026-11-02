@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Healing Hands Healthcare — nursing staffing agency in Austin, TX placing RNs, LPNs, and CNAs with healthcare facilities since 1995.">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:,">
+<link rel="icon" href="logo-mark.jpg">
 <title>Healing Hands Healthcare — Nursing Staffing Agency in Austin, TX | RN, LPN & CNA Staffing Since 1995</title>
 <link rel="canonical" href="https://healinghandshc.github.io/healing-hands-healthcare/">
 <script type="application/ld+json">
@@ -14,6 +14,7 @@
   "@type": "EmploymentAgency",
   "name": "Healing Hands Healthcare",
   "url": "https://healinghandshc.github.io/healing-hands-healthcare/",
+  "logo": "https://healinghandshc.github.io/healing-hands-healthcare/logo.jpg",
   "telephone": "+1-512-693-9741",
   "email": "Healinghandstogether@gmail.com",
   "foundingDate": "1995",
@@ -34,16 +35,16 @@
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #f8fafb;
+    --bg: #f8fbfb;
     --surface: #ffffff;
-    --surface-2: #eef4f3;
-    --ink: #0d2733;
-    --muted: #4f656f;
-    --accent: #0b7a68;
-    --accent-deep: #075f52;
-    --accent-soft: #e2f0ec;
+    --surface-2: #eef7f6;
+    --ink: #103564;
+    --muted: #4a6675;
+    --accent: #258c91;
+    --accent-deep: #1a6b70;
+    --accent-soft: #e3f4f3;
     --accent-fg: #ffffff;
-    --line: #dbe6e2;
+    --line: #d5e8e6;
     --shadow: 0 18px 44px -22px rgba(7, 48, 57, 0.28);
     --radius-card: 20px;
     --radius-pill: 999px;
@@ -52,16 +53,16 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0a1216;
-      --surface: #111b1f;
-      --surface-2: #15211f;
-      --ink: #e9f2f0;
-      --muted: #9db4ad;
-      --accent: #35c49a;
-      --accent-deep: #2aa67f;
-      --accent-soft: #152822;
+      --bg: #0a1418;
+      --surface: #101d24;
+      --surface-2: #14242a;
+      --ink: #eaf4f3;
+      --muted: #9dbfc0;
+      --accent: #70dbd5;
+      --accent-deep: #8fe0da;
+      --accent-soft: #16323a;
       --accent-fg: #06231b;
-      --line: #223230;
+      --line: #22393f;
       --shadow: 0 18px 44px -22px rgba(0, 0, 0, 0.7);
     }
   }
@@ -101,9 +102,10 @@
   }
   .brand-mark {
     width: 38px; height: 38px; border-radius: 12px; flex: 0 0 38px;
-    background: var(--accent); color: var(--accent-fg);
+    background: #ffffff; overflow: hidden;
     display: grid; place-items: center;
   }
+  .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
   .nav-links { display: flex; align-items: center; gap: 22px; list-style: none; margin: 0; padding: 0; }
   .nav-links a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.95rem; }
   .nav-links a:hover { color: var(--ink); }
@@ -139,7 +141,7 @@
     box-shadow: var(--shadow);
   }
 
-  /* ---------- Sections ---------- */
+  .hero-logo { border-radius: 16px; }
   section.block { padding: 64px 0; }
   section.block.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .section-head { max-width: 660px; margin-bottom: 40px; }
@@ -267,11 +269,7 @@
 <nav class="nav" aria-label="Primary">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Healing Hands Healthcare — home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-          <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3z" fill="currentColor"/>
-        </svg>
-      </span>
+      <span class="brand-mark" aria-hidden="true"><img src="logo-mark.jpg" alt="" width="38" height="38"></span>
       <span>Healing Hands Healthcare</span>
     </a>
     <ul class="nav-links">
@@ -300,19 +298,7 @@
         <a class="btn btn-ghost" href="#services">Explore our services</a>
       </div>
     </div>
-    <div class="hero-art" role="img" aria-label="Heart with a medical cross and heartbeat line">
-      <svg viewBox="0 0 480 380" fill="none" aria-hidden="true">
-        <circle cx="240" cy="170" r="130" fill="var(--accent)" opacity="0.10"/>
-        <circle cx="400" cy="60" r="26" fill="var(--accent)" opacity="0.14"/>
-        <circle cx="70" cy="320" r="18" fill="var(--accent)" opacity="0.14"/>
-        <path d="M240 205 C216 162 163 162 163 210 C163 249 201 279 240 306 C279 279 317 249 317 210 C317 162 264 162 240 205 Z" fill="var(--accent)"/>
-        <rect x="212" y="202" width="56" height="17" rx="8.5" fill="#ffffff"/>
-        <rect x="231.5" y="182.5" width="17" height="56" rx="8.5" fill="#ffffff"/>
-        <path d="M40 340 l26 -16 14 30 18 -58 16 46 12 -24 10 6 h220" stroke="var(--accent)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M400 284 h34 M417 267 v34" stroke="var(--accent)" stroke-width="9" stroke-linecap="round" opacity="0.55"/>
-        <path d="M64 88 h26 M77 75 v26" stroke="var(--accent)" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
-      </svg>
-    </div>
+    <div class="hero-art"><img class="hero-logo" src="logo.jpg" alt="Healing Hands Together Healthcare Agency logo: two hands forming a heart around a medical cross" width="1024" height="1024"></div>
   </div>
 </header>
 
