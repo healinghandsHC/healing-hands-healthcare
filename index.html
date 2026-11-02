@@ -213,6 +213,31 @@
   .member .role { font-weight: 700; color: var(--accent-deep); }
   @media (prefers-color-scheme: dark) { .member .role { color: var(--accent); } }
 
+
+  /* ---------- Request form ---------- */
+  .form-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 26px; padding: 40px 36px; box-shadow: var(--shadow);
+    max-width: 780px;
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .form-grid .full { grid-column: 1 / -1; }
+  .field label { display: block; font-weight: 700; font-size: 0.92rem; margin-bottom: 6px; }
+  .field input, .field select, .field textarea {
+    width: 100%; font: inherit; font-size: 1rem; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .field textarea { min-height: 110px; resize: vertical; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent);
+  }
+  .check-row { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-top: 4px; }
+  .check-row label { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.97rem; margin: 0; cursor: pointer; }
+  .check-row input { width: 18px; height: 18px; accent-color: var(--accent); }
+  .form-note { color: var(--muted); font-size: 0.92rem; margin: 18px 0 0; }
+  @media (max-width: 620px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 28px 22px; } }
+
   /* ---------- Contact ---------- */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
   .contact-info { padding: 8px 0; }
@@ -278,7 +303,7 @@
       <li><a href="#team">Leadership</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="btn btn-primary btn-sm" href="tel:+15126939741" aria-label="Call Healing Hands Healthcare at (512) 693-9741">Request Staffing</a>
+    <a class="btn btn-primary btn-sm" href="#request">Request Staffing</a>
   </div>
 </nav>
 
@@ -411,6 +436,86 @@
   </div>
 </section>
 
+<section class="block" id="request" aria-labelledby="request-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="request-h">Request staffing</h2>
+      <p>Tell us what your facility needs. Send the form and a member of our team will reply from Healinghandstogether@gmail.com.</p>
+    </div>
+    <form class="form-card" action="https://formsubmit.co/Healinghandstogether@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New staffing request — Healing Hands Healthcare">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://healinghandshc.github.io/healing-hands-healthcare/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-grid">
+        <div class="field">
+          <label for="f-facility">Facility / organization name</label>
+          <input id="f-facility" name="Facility" type="text" required autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="Contact name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-email">Work email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="Phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field full">
+          <label>Staff needed</label>
+          <div class="check-row">
+            <label><input type="checkbox" name="Staff needed" value="RN"> RN</label>
+            <label><input type="checkbox" name="Staff needed" value="LPN"> LPN</label>
+            <label><input type="checkbox" name="Staff needed" value="CNA"> CNA</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-count">How many staff?</label>
+          <input id="f-count" name="Number of staff" type="number" min="1" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="f-coverage">Coverage needed</label>
+          <select id="f-coverage" name="Coverage needed">
+            <option>Single shift</option>
+            <option>Multiple shifts</option>
+            <option>Ongoing contract</option>
+            <option>Per-diem pool</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-date">Start date</label>
+          <input id="f-date" name="Start date" type="date">
+        </div>
+        <div class="field">
+          <label for="f-shift">Shifts</label>
+          <select id="f-shift" name="Shifts">
+            <option>Day</option>
+            <option>Night</option>
+            <option>Day and night</option>
+            <option>Weekends</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-location">Facility location (city, state)</label>
+          <input id="f-location" name="Facility location" type="text" autocomplete="address-level2">
+        </div>
+        <div class="field full">
+          <label for="f-details">What do you need?</label>
+          <textarea id="f-details" name="Details" placeholder="Unit type, shift times, how long you need coverage, anything else that helps us match the right clinicians."></textarea>
+        </div>
+      </div>
+      <div style="margin-top: 24px;">
+        <button class="btn btn-primary" type="submit">Send staffing request</button>
+      </div>
+      <p class="form-note">Your details go only to our team, by email. Prefer to talk? Call (512) 693-9741.</p>
+    </form>
+  </div>
+</section>
+
 <section class="block alt" id="contact" aria-labelledby="contact-h">
   <div class="wrap contact-grid">
     <div class="contact-info">
@@ -441,6 +546,7 @@
       <h3>Need nursing staff for your facility?</h3>
       <p>Reach out today and we'll line up qualified RNs, LPNs, and CNAs for your coverage needs.</p>
       <a class="btn" href="tel:+15126939741" aria-label="Call Healing Hands Healthcare at (512) 693-9741">Call (512) 693-9741</a>
+      <a class="btn" href="#request">Request staffing online</a>
     </div>
   </div>
 </section>
