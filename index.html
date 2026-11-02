@@ -301,6 +301,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#mission">Mission &amp; Vision</a></li>
       <li><a href="#team">Leadership</a></li>
+      <li><a href="#join">Join Our Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a class="btn btn-primary btn-sm" href="#request">Request Staffing</a>
@@ -510,6 +511,93 @@
       </div>
       <div style="margin-top: 24px;">
         <button class="btn btn-primary" type="submit">Send staffing request</button>
+      </div>
+      <p class="form-note">Your details go only to our team, by email. Prefer to talk? Call (512) 693-9741.</p>
+      <p class="form-note">Are you a nurse looking for work? <a href="#join">Join our team</a>.</p>
+    </form>
+  </div>
+</section>
+
+<section class="block alt" id="join" aria-labelledby="join-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="join-h">Join our team</h2>
+      <p>Are you an RN, LPN, or CNA looking for shifts? Tell us about yourself. A member of our team will reply from Healinghandstogether@gmail.com.</p>
+    </div>
+    <form class="form-card" action="https://formsubmit.co/Healinghandstogether@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New clinician application — Healing Hands Healthcare">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://healinghandshc.github.io/healing-hands-healthcare/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-grid">
+        <div class="field">
+          <label for="j-name">Full name</label>
+          <input id="j-name" name="Full name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="j-email">Email</label>
+          <input id="j-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="j-phone">Phone</label>
+          <input id="j-phone" name="Phone" type="tel" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="j-role">License / credential</label>
+          <select id="j-role" name="License / credential">
+            <option>RN</option>
+            <option>LPN / LVN</option>
+            <option>CNA</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="j-state">License state(s)</label>
+          <input id="j-state" name="License states" type="text" placeholder="e.g. TX, IN">
+        </div>
+        <div class="field">
+          <label for="j-exp">Years of experience</label>
+          <input id="j-exp" name="Years of experience" type="number" min="0" inputmode="numeric">
+        </div>
+        <div class="field full">
+          <label>Specialties / experience</label>
+          <div class="check-row">
+            <label><input type="checkbox" name="Specialties" value="ICU"> ICU</label>
+            <label><input type="checkbox" name="Specialties" value="Emergency"> Emergency</label>
+            <label><input type="checkbox" name="Specialties" value="Med-surg / telemetry"> Med-surg / telemetry</label>
+            <label><input type="checkbox" name="Specialties" value="Psychiatric"> Psychiatric</label>
+            <label><input type="checkbox" name="Specialties" value="Long-term care"> Long-term care</label>
+            <label><input type="checkbox" name="Specialties" value="Pediatrics"> Pediatrics</label>
+          </div>
+        </div>
+        <div class="field full">
+          <label>Availability</label>
+          <div class="check-row">
+            <label><input type="checkbox" name="Availability" value="Per-diem"> Per-diem</label>
+            <label><input type="checkbox" name="Availability" value="Contract"> Contract</label>
+            <label><input type="checkbox" name="Availability" value="Day shifts"> Day shifts</label>
+            <label><input type="checkbox" name="Availability" value="Night shifts"> Night shifts</label>
+            <label><input type="checkbox" name="Availability" value="Weekends"> Weekends</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Certifications</label>
+          <div class="check-row">
+            <label><input type="checkbox" name="Certifications" value="BLS"> BLS</label>
+            <label><input type="checkbox" name="Certifications" value="ACLS"> ACLS</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="j-location">Your location (city, state)</label>
+          <input id="j-location" name="Location" type="text" autocomplete="address-level2">
+        </div>
+        <div class="field full">
+          <label for="j-details">Anything else we should know?</label>
+          <textarea id="j-details" name="Details" placeholder="Units you know best, when you can start, anything else that helps us match you to the right shifts."></textarea>
+        </div>
+      </div>
+      <div style="margin-top: 24px;">
+        <button class="btn btn-primary" type="submit">Apply to join our team</button>
       </div>
       <p class="form-note">Your details go only to our team, by email. Prefer to talk? Call (512) 693-9741.</p>
     </form>
