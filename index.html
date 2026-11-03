@@ -271,6 +271,28 @@
   footer { border-top: 1px solid var(--line); padding: 36px 0; color: var(--muted); font-size: 0.92rem; }
   .footer-inner { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; }
 
+  /* ---------- Educational resources ---------- */
+  .resource-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .resource-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius-card); padding: 28px 24px;
+    display: flex; flex-direction: column; gap: 0;
+    box-shadow: 0 4px 18px -12px rgba(7, 48, 57, 0.25);
+  }
+  @media (prefers-color-scheme: dark) { .resource-card { box-shadow: none; } }
+  .resource-tag {
+    align-self: flex-start;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent-deep); background: var(--accent-soft);
+    border-radius: var(--radius-pill); padding: 5px 12px; margin-bottom: 16px;
+  }
+  @media (prefers-color-scheme: dark) { .resource-tag { color: var(--accent); } }
+  .resource-card h3 { font-size: 1.2rem; font-family: var(--font-body); font-weight: 700; letter-spacing: 0; margin-bottom: 8px; }
+  .resource-card p { color: var(--muted); font-size: 0.97rem; margin: 0 0 20px; flex: 1; }
+  .resource-card .btn { align-self: flex-start; }
+  @media (max-width: 900px) { .resource-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .resource-grid { grid-template-columns: 1fr; } }
+
   /* ---------- Responsive ---------- */
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -302,6 +324,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#mission">Mission &amp; Vision</a></li>
       <li><a href="#team">Leadership</a></li>
+      <li><a href="#resources">Resources</a></li>
       <li><a href="#join">Join Our Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -433,6 +456,47 @@
           <h3>Jackson Tamner</h3>
           <p><span class="role">Manager</span> · Operations &amp; client coordination</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="resources" aria-labelledby="resources-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="resources-h">Educational resources</h2>
+      <p>Free study tools for nurses and nursing students, built by Healing Hands. Open any tool in your browser — no download or sign-up needed.</p>
+    </div>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <span class="resource-tag">Cardiac</span>
+        <h3>EKG Trainer</h3>
+        <p>Learn to read heart rhythms with 12 rhythms and practice questions, built for nurses learning EKGs.</p>
+        <a class="btn btn-ghost btn-sm" href="https://healinghandshc.github.io/ekg-coach/" target="_blank" rel="noopener">Open tool</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-tag">Critical Care</span>
+        <h3>CVICU Nurse Expert Academy</h3>
+        <p>14 modules and over 100 lessons on cardiovascular ICU nursing, from the basics to advanced care.</p>
+        <a class="btn btn-ghost btn-sm" href="https://healinghandshc.github.io/cvicu-nurse-expert-academy/" target="_blank" rel="noopener">Open tool</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-tag">Respiratory</span>
+        <h3>Respiratory Therapy Study Program</h3>
+        <p>685 practice questions across 10 topics for respiratory therapy study and review.</p>
+        <a class="btn btn-ghost btn-sm" href="https://healinghandshc.github.io/resp-therapy-coach/" target="_blank" rel="noopener">Open tool</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-tag">Emergency</span>
+        <h3>ACLS Code Blue Learning</h3>
+        <p>8 algorithms, 15 medications, and 20 questions for ACLS and code response practice.</p>
+        <a class="btn btn-ghost btn-sm" href="https://healinghandshc.github.io/acls-med-learn/" target="_blank" rel="noopener">Open tool</a>
+      </div>
+      <div class="resource-card">
+        <span class="resource-tag">Exam Review</span>
+        <h3>Nursing Review</h3>
+        <p>201 quiz questions across 10 subjects for nursing review and exam preparation.</p>
+        <a class="btn btn-ghost btn-sm" href="https://healinghandshc.github.io/nursing-quiz-master/" target="_blank" rel="noopener">Open tool</a>
       </div>
     </div>
   </div>
